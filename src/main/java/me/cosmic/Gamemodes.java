@@ -70,7 +70,7 @@ public class Gamemodes implements Listener {
             AdventurerIS.setItemMeta(AdventurerISMeta);
         }
 
-        ItemStack SpectatorIS = new ItemStack(Material.IRON_BARS, 1);
+        ItemStack SpectatorIS = new ItemStack(Material.DIAMOND_HELMET, 1);
         ItemMeta SpectatorISMeta = SpectatorIS.getItemMeta();
         if (SpectatorISMeta != null) {
             SpectatorISMeta.setDisplayName(SpectatorISDisplay);

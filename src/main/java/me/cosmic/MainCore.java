@@ -16,7 +16,7 @@ public class MainCore extends JavaPlugin implements Listener {
         plugin = this;
         registerEvents(this, new Gamemodes());
 
-        getCommand("gamemode").setExecutor(new Commands());
+        getCommand("gamemodegui").setExecutor(new OPPCoreCommands());
 
     }
 
