@@ -7,3 +7,5 @@ description: OP-Prison Core
 commands:
   gamemodegui:
     description: Gamemodes GUI
+  clearinv:
+    description: Clears Inventory

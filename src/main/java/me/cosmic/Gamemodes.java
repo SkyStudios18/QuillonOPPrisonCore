@@ -17,7 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import static org.bukkit.Bukkit.getServer;
 
 public class Gamemodes implements Listener {
-    static String prefix = ChatColor.GREEN + "Quillon " + ChatColor.BLUE + "Network ";
+    static String prefix = ChatColor.GRAY + "[" + ChatColor.GREEN + "Quillon " + ChatColor.BLUE + "Network" + ChatColor.GRAY + "] ";
     static String GamemodesInvDisplay = prefix + ChatColor.AQUA + "Gamemodes";
 
     final String CreativeISDisplay = ChatColor.GOLD + "Creative";
@@ -80,7 +80,7 @@ public class Gamemodes implements Listener {
             SpectatorIS.setItemMeta(SpectatorISMeta);
         }
 
-        ItemStack EmptyIS = new ItemStack(Material.GLASS_PANE, 1);
+        ItemStack EmptyIS = new ItemStack(Material.GLASS, 1);
         ItemMeta EmptyISMeta = EmptyIS.getItemMeta();
         if (EmptyISMeta != null) {
             EmptyISMeta.setDisplayName(EmptyISDisplay);
@@ -120,19 +120,23 @@ public class Gamemodes implements Listener {
 
             if(item.getItemMeta() != null && item.getItemMeta().getDisplayName().equals(CreativeISDisplay)) {
                 p.setGameMode(GameMode.CREATIVE);
-                p.sendMessage("Gamemode Updated to Creative");
+                p.closeInventory();
+                p.sendMessage(prefix + "Gamemode Updated to Creative");
             }
             else if(item.getItemMeta() != null && item.getItemMeta().getDisplayName().equals(SurvivalISDisplay)) {
                 p.setGameMode(GameMode.SURVIVAL);
-                p.sendMessage("Gamemode Updated to Survival");
+                p.closeInventory();
+                p.sendMessage(prefix + "Gamemode Updated to Survival");
             }
             else if(item.getItemMeta() != null && item.getItemMeta().getDisplayName().equals(AdventurerISDisplay)) {
                 p.setGameMode(GameMode.ADVENTURE);
-                p.sendMessage("Gamemode Updated to Adventurer");
+                p.closeInventory();
+                p.sendMessage(prefix + "Gamemode Updated to Adventurer");
             }
             else if(item.getItemMeta() != null && item.getItemMeta().getDisplayName().equals(SpectatorISDisplay)) {
                 p.setGameMode(GameMode.SPECTATOR);
-                p.sendMessage("Gamemode Updated to Spectator");
+                p.closeInventory();
+                p.sendMessage(prefix + "Gamemode Updated to Spectator");
             }
         }
     }
