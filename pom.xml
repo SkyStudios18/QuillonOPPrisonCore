@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.cosmic</groupId>
-    <artifactId>QuillonStaffCommands</artifactId>
+    <artifactId>QuillonOPPrisonCore</artifactId>
     <version>0.0.1</version>
     <build>
         <plugins>
