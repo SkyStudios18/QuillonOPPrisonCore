@@ -1,0 +1,9 @@
+main: me.cosmic.MainCore
+name: QuillonOPPrisonCore
+author: CosmicGamer5246
+version: 1.0.0
+api-version: 1.16
+description: OP-Prison Core
+commands:
+  gamemodegui:
+    description: Gamemodes GUI
